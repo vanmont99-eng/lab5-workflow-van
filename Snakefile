@@ -1,6 +1,6 @@
 # Lab 5: Scalable Analysis Workflow
 #
-# STAGE 1 of 3: the two branches on their own. Merge + report come next.
+# STAGE 2 of 3: branches linked and merged. Report comes next.
 #
 #   messy_samples.csv --clean_samples--> samples_clean.csv --+
 #                                                            +--make_crosswalk--> crosswalk.tsv
@@ -19,8 +19,7 @@ configfile: "config.yaml"
 
 rule all:
     input:
-        "results/samples_clean.csv",
-        "results/feature_table.tsv",
+        "results/combined_table.tsv",
 
 
 # ---------- raw data (downloaded, not committed) ----------
@@ -81,3 +80,36 @@ rule build_feature_table:
         "python {input.script} --db {input.db}"
         " --features-sql {input.features_sql} --genes-sql {input.genes_sql}"
         " --output {output} > {log} 2>&1"
+
+
+# ---------- stage 3: link and merge ----------
+
+rule make_crosswalk:
+    input:
+        script="scripts/make_crosswalk.py",
+        samples="results/samples_clean.csv",
+        patients="results/feature_table.tsv",
+    output:
+        "results/crosswalk.tsv",
+    params:
+        seed=config["crosswalk_seed"],
+    log:
+        "logs/make_crosswalk.log",
+    shell:
+        "python {input.script} --samples {input.samples} --patients {input.patients}"
+        " --seed {params.seed} --output {output} > {log} 2>&1"
+
+
+rule merge_tables:
+    input:
+        script="scripts/merge_tables.py",
+        samples="results/samples_clean.csv",
+        crosswalk="results/crosswalk.tsv",
+        features="results/feature_table.tsv",
+    output:
+        "results/combined_table.tsv",
+    log:
+        "logs/merge_tables.log",
+    shell:
+        "python {input.script} --samples {input.samples} --crosswalk {input.crosswalk}"
+        " --features {input.features} --output {output} > {log} 2>&1"
