@@ -1,7 +1,5 @@
 # Lab 5: Scalable Analysis Workflow
 #
-# STAGE 2 of 3: branches linked and merged. Report comes next.
-#
 #   messy_samples.csv --clean_samples--> samples_clean.csv --+
 #                                                            +--make_crosswalk--> crosswalk.tsv
 #   cohort.db --build_feature_table--> feature_table.tsv ----+          |
@@ -19,7 +17,8 @@ configfile: "config.yaml"
 
 rule all:
     input:
-        "results/combined_table.tsv",
+        "results/report.md",
+        "results/summary_figure.png",
 
 
 # ---------- raw data (downloaded, not committed) ----------
@@ -113,3 +112,19 @@ rule merge_tables:
     shell:
         "python {input.script} --samples {input.samples} --crosswalk {input.crosswalk}"
         " --features {input.features} --output {output} > {log} 2>&1"
+
+
+# ---------- stage 4: summary report ----------
+
+rule make_report:
+    input:
+        script="scripts/make_report.py",
+        table="results/combined_table.tsv",
+    output:
+        figure="results/summary_figure.png",
+        report="results/report.md",
+    log:
+        "logs/make_report.log",
+    shell:
+        "python {input.script} --input {input.table}"
+        " --figure {output.figure} --report {output.report} > {log} 2>&1"
