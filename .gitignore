@@ -1,0 +1,22 @@
+# Raw data: downloaded by the workflow from the course repo, not committed
+data/
+
+# Snakemake's own bookkeeping and per-run logs
+.snakemake/
+logs/
+
+# Secrets
+.env
+
+# Python
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

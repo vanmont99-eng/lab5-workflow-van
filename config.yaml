@@ -1,0 +1,6 @@
+# Raw inputs, pulled from the course repo (not committed here)
+messy_samples_url: "https://github.com/gwcbi/applied-computing-HDS/raw/main/data/raw/lab3-messy-data/messy_samples.csv"
+cohort_db_url: "https://github.com/gwcbi/applied-computing-HDS/raw/main/data/raw/lab4-cbioportal-luad/cohort.db"
+
+# Seed for the synthetic sample -> patient crosswalk
+crosswalk_seed: 6854
