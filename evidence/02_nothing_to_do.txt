@@ -1,0 +1,20 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-11-03 17:37:11
+  Workflow ID: 35915c4a-5f96-4302-86c7-0d5b23ac21c0
+  Platform: macOS-26.5-arm64-arm-64bit
+  Host: Vans-MacBook-Air.local
+  User: vanmont
+  Snakemake version: 9.24.0
+  Python version: 3.12.16 (main, Oct 26 2026, 11:31:43) [Clang 21.1.8 ]
+  Command: /opt/homebrew/Caskroom/miniforge/base/envs/lab5/bin/snakemake -n
+  Snakefile: /Users/vanmont/lab5-workflow-van/Snakefile
+  Base directory: /Users/vanmont/lab5-workflow-van
+  Run directory: /Users/vanmont/lab5-workflow-van
+  Working directory: /Users/vanmont/lab5-workflow-van
+  Config file(s): ['config.yaml']
+  Config MD5: 714f75bb778fdfbb5283094fbd706a00
+
+Building DAG of jobs...
+Nothing to be done (all requested files are present and up to date).

@@ -1,0 +1,61 @@
+sample_id	patient_id	match_basis
+S0001	TCGA-62-8402	same sex (F)
+S0002	TCGA-NJ-A4YP	same sex (M)
+S0003	TCGA-55-8299	same sex (F)
+S0004	TCGA-91-8499	same sex (F)
+S0005	TCGA-69-7761	same sex (M)
+S0006	TCGA-44-A47G	same sex (F)
+S0007	TCGA-55-A57B	sample sex unknown, any patient
+S0008	TCGA-44-3918	same sex (F)
+S0009	TCGA-05-4244	same sex (M)
+S0010	TCGA-73-4658	same sex (F)
+S0011	TCGA-62-A471	same sex (M)
+S0012	TCGA-38-4626	sample sex unknown, any patient
+S0013	TCGA-4B-A93V	same sex (F)
+S0014	TCGA-50-6590	same sex (F)
+S0015	TCGA-44-5643	same sex (M)
+S0016	TCGA-44-8119	sample sex unknown, any patient
+S0017	TCGA-05-4422	sample sex unknown, any patient
+S0018	TCGA-44-5645	same sex (F)
+S0019	TCGA-44-6778	same sex (M)
+S0020	TCGA-99-8025	same sex (F)
+S0021	TCGA-55-6972	same sex (M)
+S0022	TCGA-55-A4DF	sample sex unknown, any patient
+S0023	TCGA-MP-A4SW	same sex (M)
+S0024	TCGA-50-5044	same sex (F)
+S0025	TCGA-62-A472	same sex (M)
+S0026	TCGA-49-4490	same sex (F)
+S0027	TCGA-MP-A4TF	same sex (F)
+S0028	TCGA-55-7913	same sex (F)
+S0029	TCGA-44-4112	same sex (F)
+S0030	TCGA-55-6968	same sex (M)
+S0031	TCGA-49-4486	same sex (M)
+S0032	TCGA-55-8092	sample sex unknown, any patient
+S0033	TCGA-55-7727	same sex (M)
+S0034	TCGA-44-6777	sample sex unknown, any patient
+S0035	TCGA-44-3396	same sex (F)
+S0036	TCGA-05-4426	sample sex unknown, any patient
+S0037	TCGA-78-7150	sample sex unknown, any patient
+S0038	TCGA-86-8280	sample sex unknown, any patient
+S0039	TCGA-55-A490	same sex (M)
+S0040	TCGA-73-A9RS	same sex (M)
+S0041	TCGA-55-6983	same sex (M)
+S0042	TCGA-86-8074	same sex (F)
+S0043	TCGA-50-5941	sample sex unknown, any patient
+S0044	TCGA-78-7163	sample sex unknown, any patient
+S0045	TCGA-NJ-A55R	same sex (M)
+S0046	TCGA-44-3919	same sex (F)
+S0047	TCGA-95-7043	sample sex unknown, any patient
+S0048	TCGA-78-7535	same sex (M)
+S0049	TCGA-75-6207	same sex (M)
+S0050	TCGA-O1-A52J	sample sex unknown, any patient
+S0051	TCGA-MP-A4TE	same sex (M)
+S0052	TCGA-91-6835	sample sex unknown, any patient
+S0053	TCGA-55-6712	same sex (M)
+S0054	TCGA-44-3917	sample sex unknown, any patient
+S0055	TCGA-44-6144	sample sex unknown, any patient
+S0056	TCGA-50-5936	same sex (M)
+S0057	TCGA-55-1595	same sex (F)
+S0058	TCGA-62-A46R	same sex (F)
+S0059	TCGA-78-7166	same sex (M)
+S0060	TCGA-69-7973	sample sex unknown, any patient

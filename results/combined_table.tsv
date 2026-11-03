@@ -1,0 +1,61 @@
+sample_id	patient_name	dob	dob_flag	sex_sample	enrollment_site	glucose_mg_dl	glucose_flag	notes	patient_id	match_basis	sex_patient	age_at_diagnosis	stage	tissue_source_site	tmb	TP53_count	KRAS_count	EGFR_count	STK11_count	KEAP1_count
+S0001	A. Nguyen	1962-07-09	NA	F	B	145.9	NA	NA	TCGA-62-8402	same sex (F)	female	73.0	IIIA	Thoraxklinik at University Hospital Heidelberg	1.366666667	1	0	1	0	0
+S0002	T. Patel	1974-12-16	NA	M	C	146.1	NA	NA	TCGA-NJ-A4YP	same sex (M)	male	52.0	IB	Washington University - Rush University	15.66666667	0	1	0	2	0
+S0003	R. Martinez	1953-11-24	2-digit year inferred	F	B	84.2	NA	NA	TCGA-55-8299	same sex (F)	female	61.0	IA	International Genomics Consortium	12.16666667	0	1	0	1	0
+S0004	A. Patel	1957-02-27	NA	F	B	120.0	NA	NA	TCGA-91-8499	same sex (F)	female	76.0	IA	ABS - IUPUI	9.433333333	1	0	0	0	0
+S0005	B. Martinez	1997-12-02	NA	M	B	138.3	NA	NA	TCGA-69-7761	same sex (M)	male	84.0	IB	Washington University - Cleveland Clinic	0.966666667	0	0	0	0	0
+S0006	R. Kim	1968-12-05	NA	F	C	159.9	labeled mmol/L but only plausible as mg/dL, not converted	NA	TCGA-44-A47G	same sex (F)	female	73.0	IA	Christiana Healthcare	2.633333333	1	0	0	0	0
+S0007	T. Martinez	1969-09-04	NA	Unknown	A	206.0	NA	NA	TCGA-55-A57B	sample sex unknown, any patient	female	80.0	IA	International Genomics Consortium	1.3	1	0	1	0	0
+S0008	K. Davis	1999-08-20	NA	F	C	229.3	NA	NA	TCGA-44-3918	same sex (F)	female	60.0	IA	Christiana Healthcare	58.33333333	1	0	0	0	0
+S0009	S. Davis	1995-07-19	NA	M	C	185.0	NA	NA	TCGA-05-4244	same sex (M)	male	70.0	IV	Indivumed	6.4	0	1	0	0	0
+S0010	A. Martinez	1951-10-01	NA	F	C	215.2	NA	re-draw requested	TCGA-73-4658	same sex (F)	female	80.0	IB	Roswell Park	10.66666667	0	0	0	0	0
+S0011	B. Davis	1961-07-09	2-digit year inferred	M	A	165.0	labeled mmol/L but only plausible as mg/dL, not converted	NA	TCGA-62-A471	same sex (M)	male	64.0	IIB	Thoraxklinik at University Hospital Heidelberg	3.033333333	1	0	0	0	0
+S0012	T. Johnson	1996-06-07	2-digit year inferred	Unknown	A	110.4	NA	re-draw requested	TCGA-38-4626	sample sex unknown, any patient	female	57.0	IIA	UNC	8.033333333	0	0	0	0	0
+S0013	A. Patel	1952-10-26	NA	F	B	112.8	labeled mmol/L but only plausible as mg/dL, not converted	NA	TCGA-4B-A93V	same sex (F)	female	52.0	IA	Mary Bird Perkins Cancer Center - Our Lady of the Lake	4.1	1	1	0	1	1
+S0014	K. Kim	1958-09-12	2-digit year inferred	F	B	144.0	NA	NA	TCGA-50-6590	same sex (F)	female	72.0	IB	University of Pittsburgh	27.63333333	1	0	0	0	0
+S0015	B. Patel	1998-02-11	2-digit year inferred	M	B	103.0	labeled mmol/L but only plausible as mg/dL, not converted	NA	TCGA-44-5643	same sex (M)	male	53.0	IIIA	Christiana Healthcare	7.433333333	0	0	0	0	0
+S0016	A. Davis	1958-05-15	NA	Unknown	B	157.4	NA	NA	TCGA-44-8119	sample sex unknown, any patient	male	73.0	IIB	Christiana Healthcare	19.36666667	0	0	0	2	0
+S0017	K. Nguyen	2015-07-16	2-digit year inferred	Unknown	A	123.4	NA	NA	TCGA-05-4422	sample sex unknown, any patient	male	68.0	IB	Indivumed	1.333333333	0	0	0	1	0
+S0018	J. Smith	1957-03-10	NA	F	B	82.2	NA	NA	TCGA-44-5645	same sex (F)	female	61.0	IA	Christiana Healthcare	2.366666667	1	0	1	0	0
+S0019	B. Kim	2000-09-16	NA	M	A	190.6	NA	NA	TCGA-44-6778	same sex (M)	male	59.0	IA	Christiana Healthcare	23.43333333	1	0	0	0	1
+S0020	B. Smith	2000-07-05	NA	F	B	108.4	NA	NA	TCGA-99-8025	same sex (F)	female	72.0	IIIA	Washington University - Alabama	14.63333333	1	1	0	0	0
+S0021	K. Davis	2004-11-16	NA	M	C	88.6	NA	NA	TCGA-55-6972	same sex (M)	male	72.0	IB	International Genomics Consortium	8.8	0	0	0	0	1
+S0022	M. Johnson	2006-11-25	NA	Unknown	A	233.0	NA	NA	TCGA-55-A4DF	sample sex unknown, any patient	male	88.0	IA	International Genomics Consortium	22.73333333	1	0	0	0	1
+S0023	S. Lee	1999-06-30	2-digit year inferred	M	A	83.5	NA	NA	TCGA-MP-A4SW	same sex (M)	male	53.0	IIB	Washington University - Mayo Clinic	2.066666667	0	0	1	0	0
+S0024	S. Johnson	1953-07-31	NA	F	C	114.9	NA	NA	TCGA-50-5044	same sex (F)	female	72.0	IIIB	University of Pittsburgh	4.066666667	0	0	0	0	0
+S0025	M. Lee	1965-11-19	2-digit year inferred	M	A	202.6	NA	NA	TCGA-62-A472	same sex (M)	male	70.0	IIB	Thoraxklinik at University Hospital Heidelberg	1.766666667	1	0	0	0	0
+S0026	J. Garcia	1953-06-22	2-digit year inferred	F	A	217.0	labeled mmol/L but only plausible as mg/dL, not converted	NA	TCGA-49-4490	same sex (F)	female	45.0	IIIA	Johns Hopkins	1.6	1	0	1	0	0
+S0027	T. Johnson	1956-03-24	NA	F	C	161.7	NA	NA	TCGA-MP-A4TF	same sex (F)	female	58.0	IIA	Washington University - Mayo Clinic	12.63333333	1	1	0	0	0
+S0028	S. Smith	1988-12-26	NA	F	B	179.1	NA	NA	TCGA-55-7913	same sex (F)	female	61.0	IA	International Genomics Consortium	10.33333333	0	0	0	1	0
+S0029	M. Johnson	2009-08-04	NA	F	C	222.6	NA	NA	TCGA-44-4112	same sex (F)	female	60.0	IB	Christiana Healthcare	29.0	0	0	0	0	0
+S0030	M. Kim	1984-01-06	NA	M	B	168.6	NA	NA	TCGA-55-6968	same sex (M)	male	61.0	IV	International Genomics Consortium	15.4	1	0	1	0	0
+S0031	K. Brown	1995-11-11	2-digit year inferred	M	C	85.3	NA	NA	TCGA-49-4486	same sex (M)	male	72.0	IA	Johns Hopkins	4.8	0	0	0	0	1
+S0032	J. Smith	1992-08-17	NA	Unknown	B	229.5	NA	NA	TCGA-55-8092	sample sex unknown, any patient	male	75.0	IIB	International Genomics Consortium	16.43333333	1	0	0	1	0
+S0033	B. Kim	2012-06-07	2-digit year inferred	M	B	114.9	NA	NA	TCGA-55-7727	same sex (M)	male	70.0	IIIA	International Genomics Consortium	7.366666667	1	0	0	0	0
+S0034	K. Martinez	1995-04-15	2-digit year inferred	Unknown	A	203.9	labeled mmol/L but only plausible as mg/dL, not converted	NA	TCGA-44-6777	sample sex unknown, any patient	female	85.0	IB	Christiana Healthcare	22.53333333	1	0	0	0	0
+S0035	K. Patel	1956-12-13	NA	F	A	130.5	NA	NA	TCGA-44-3396	same sex (F)	female	74.0	IIIA	Christiana Healthcare	12.2	1	0	0	0	0
+S0036	T. Johnson	1987-04-21	NA	Unknown	C	145.6	NA	NA	TCGA-05-4426	sample sex unknown, any patient	male	71.0	IB	Indivumed	1.466666667	1	0	0	0	0
+S0037	T. Kim	2015-11-28	NA	Unknown	A	119.1	labeled mmol/L but only plausible as mg/dL, not converted	re-draw requested	TCGA-78-7150	sample sex unknown, any patient	male	59.0	IIB	Prince Charles Hospital	12.26666667	1	0	0	0	0
+S0038	K. Lee	1997-12-02	NA	Unknown	B	171.6	NA	NA	TCGA-86-8280	sample sex unknown, any patient	female	54.0	IIA	Asterand	1.466666667	1	0	1	1	0
+S0039	R. Patel	1980-04-12	2-digit year inferred	M	C	241.2	asterisk in source; labeled mmol/L but only plausible as mg/dL, not converted	NA	TCGA-55-A490	same sex (M)	male	78.0	IIA	International Genomics Consortium	39.76666667	0	1	0	0	0
+S0040	R. Patel	2008-06-21	NA	M	A	105.9	NA	NA	TCGA-73-A9RS	same sex (M)	male	41.0	IIB	Roswell Park	28.3	0	0	0	1	0
+S0041	K. Nguyen	1965-01-20	NA	M	A	89.5	NA	NA	TCGA-55-6983	same sex (M)	male	81.0	IIB	International Genomics Consortium	3.5	0	1	0	0	0
+S0042	M. Garcia	2006-04-10	NA	F	C	209.0	asterisk in source	NA	TCGA-86-8074	same sex (F)	female	62.0	IIA	Asterand	2.1	1	0	1	0	0
+S0043	B. Davis	1951-02-19	2-digit year inferred	Unknown	A	148.0	NA	NA	TCGA-50-5941	sample sex unknown, any patient	female	55.0	IIIA	University of Pittsburgh	12.23333333	0	1	0	0	0
+S0044	S. Martinez	1998-04-13	2-digit year inferred	Unknown	B	218.6	NA	NA	TCGA-78-7163	sample sex unknown, any patient	male	60.0	IB	Prince Charles Hospital	1.666666667	0	0	0	0	0
+S0045	K. Martinez	1984-01-01	NA	M	B	223.2	NA	NA	TCGA-NJ-A55R	same sex (M)	male	67.0	IA	Washington University - Rush University	7.7	0	1	0	2	1
+S0046	S. Davis	1967-02-21	NA	F	C	143.2	NA	NA	TCGA-44-3919	same sex (F)	female	71.0	IA	Christiana Healthcare	3.366666667	0	0	0	0	0
+S0047	M. Kim	1977-06-21	NA	Unknown	B	165.6	labeled mmol/L but only plausible as mg/dL, not converted	NA	TCGA-95-7043	sample sex unknown, any patient	female	63.0	IA	Washington University - Emory	34.16666667	1	0	0	0	1
+S0048	M. Garcia	1978-04-23	NA	M	A	108.9	labeled mmol/L but only plausible as mg/dL, not converted	NA	TCGA-78-7535	same sex (M)	male	45.0	IB	Prince Charles Hospital	4.9	1	0	0	1	0
+S0049	M. Nguyen	1966-02-05	NA	M	C	166.1	NA	re-draw requested	TCGA-75-6207	same sex (M)	male	NA	IIIA	Ontario Institute for Cancer Research (OICR)	2.0	1	0	1	0	0
+S0050	K. Garcia	2001-07-02	NA	Unknown	B	149.3	NA	NA	TCGA-O1-A52J	sample sex unknown, any patient	female	74.0	IA	Washington University - CALGB	5.1	1	0	0	0	0
+S0051	K. Garcia	2011-08-02	NA	M	A	216.0	NA	NA	TCGA-MP-A4TE	same sex (M)	male	56.0	IIA	Washington University - Mayo Clinic	4.166666667	0	1	0	1	1
+S0052	M. Davis	1989-09-20	NA	Unknown	A	172.4	NA	NA	TCGA-91-6835	sample sex unknown, any patient	female	81.0	IA	ABS - IUPUI	2.633333333	0	0	1	0	0
+S0053	B. Lee	1999-07-10	NA	M	A	143.5	labeled mmol/L but only plausible as mg/dL, not converted	NA	TCGA-55-6712	same sex (M)	male	71.0	IIA	International Genomics Consortium	4.3	1	0	0	0	0
+S0054	M. Nguyen	2006-01-28	NA	Unknown	A	168.0	NA	NA	TCGA-44-3917	sample sex unknown, any patient	female	33.0	IB	Christiana Healthcare	6.666666667	1	1	0	0	1
+S0055	S. Brown	2011-10-14	NA	Unknown	A	160.1	labeled mmol/L but only plausible as mg/dL, not converted	NA	TCGA-44-6144	sample sex unknown, any patient	male	58.0	IA	Christiana Healthcare	13.1	1	1	0	1	0
+S0056	A. Garcia	2010-06-30	NA	M	B	77.2	NA	NA	TCGA-50-5936	same sex (M)	male	58.0	IIIA	University of Pittsburgh	3.6	0	1	0	0	1
+S0057	K. Garcia	1986-08-20	NA	F	C	88.8	NA	NA	TCGA-55-1595	same sex (F)	female	74.0	IA	International Genomics Consortium	9.933333333	0	1	0	0	0
+S0058	A. Brown	1972-08-23	NA	F	C	142.8	NA	NA	TCGA-62-A46R	same sex (F)	female	54.0	IB	Thoraxklinik at University Hospital Heidelberg	5.666666667	1	1	0	0	0
+S0059	K. Brown	1968-04-06	NA	M	A	148.9	labeled mmol/L but only plausible as mg/dL, not converted	NA	TCGA-78-7166	same sex (M)	male	84.0	IIB	Prince Charles Hospital	6.466666667	0	1	0	2	1
+S0060	A. Davis	1970-02-27	NA	Unknown	A	186.6	NA	NA	TCGA-69-7973	sample sex unknown, any patient	female	42.0	IB	Washington University - Cleveland Clinic	8.0	0	1	0	0	0

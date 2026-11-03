@@ -1,0 +1,144 @@
+Assuming unrestricted shared filesystem usage.
+
+SNAKEMAKE
+=========
+  Date: 2026-11-03 17:37:06
+  Workflow ID: f2afb09c-6140-4e9d-b022-b8b2b3748de0
+  Platform: macOS-26.5-arm64-arm-64bit
+  Host: Vans-MacBook-Air.local
+  User: vanmont
+  Snakemake version: 9.24.0
+  Python version: 3.12.16 (main, Oct 26 2026, 11:31:43) [Clang 21.1.8 ]
+  Command: /opt/homebrew/Caskroom/miniforge/base/envs/lab5/bin/snakemake --cores 2
+  Snakefile: /Users/vanmont/lab5-workflow-van/Snakefile
+  Base directory: /Users/vanmont/lab5-workflow-van
+  Run directory: /Users/vanmont/lab5-workflow-van
+  Working directory: /Users/vanmont/lab5-workflow-van
+  Config file(s): ['config.yaml']
+  Config MD5: 714f75bb778fdfbb5283094fbd706a00
+
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 2
+Rules claiming more threads will be scaled down.
+Job stats:
+job                    count
+-------------------  -------
+get_cohort_db              1
+get_messy_samples          1
+build_feature_table        1
+clean_samples              1
+make_crosswalk             1
+merge_tables               1
+make_report                1
+all                        1
+total                      8
+
+Select jobs to execute...
+Execute 2 jobs...
+
+[Tue Nov  3 17:37:06 2026]
+localrule get_messy_samples:
+    input: scripts/get_data.py
+    output: data/raw/messy_samples.csv
+    log: logs/get_messy_samples.log
+    jobid: 4
+    reason: Missing output files: data/raw/messy_samples.csv
+    resources: tmpdir=/var/folders/m3/c_wtpwn952l_1vmqxsd9wbwm0000gn/T
+[Tue Nov  3 17:37:06 2026]
+localrule get_cohort_db:
+    input: scripts/get_data.py
+    output: data/raw/cohort.db
+    log: logs/get_cohort_db.log
+    jobid: 7
+    reason: Missing output files: data/raw/cohort.db
+    resources: tmpdir=/var/folders/m3/c_wtpwn952l_1vmqxsd9wbwm0000gn/T
+[Tue Nov  3 17:37:07 2026]
+Finished jobid: 4 (Rule: get_messy_samples)
+1 of 8 steps (12%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Nov  3 17:37:07 2026]
+localrule clean_samples:
+    input: scripts/clean_samples.py, data/raw/messy_samples.csv
+    output: results/samples_clean.csv
+    log: logs/clean_samples.log
+    jobid: 3
+    reason: Missing output files: results/samples_clean.csv; Input files updated by another job: data/raw/messy_samples.csv
+    resources: tmpdir=/var/folders/m3/c_wtpwn952l_1vmqxsd9wbwm0000gn/T
+[Tue Nov  3 17:37:07 2026]
+Finished jobid: 3 (Rule: clean_samples)
+2 of 8 steps (25%) done
+[Tue Nov  3 17:37:08 2026]
+Finished jobid: 7 (Rule: get_cohort_db)
+3 of 8 steps (38%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Nov  3 17:37:08 2026]
+localrule build_feature_table:
+    input: scripts/build_feature_table.py, data/raw/cohort.db, sql/q3_patient_features.sql, sql/q1_gene_counts.sql
+    output: results/feature_table.tsv
+    log: logs/build_feature_table.log
+    jobid: 6
+    reason: Missing output files: results/feature_table.tsv; Input files updated by another job: data/raw/cohort.db
+    resources: tmpdir=/var/folders/m3/c_wtpwn952l_1vmqxsd9wbwm0000gn/T
+[Tue Nov  3 17:37:08 2026]
+Finished jobid: 6 (Rule: build_feature_table)
+4 of 8 steps (50%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Nov  3 17:37:08 2026]
+localrule make_crosswalk:
+    input: scripts/make_crosswalk.py, results/samples_clean.csv, results/feature_table.tsv
+    output: results/crosswalk.tsv
+    log: logs/make_crosswalk.log
+    jobid: 5
+    reason: Missing output files: results/crosswalk.tsv; Input files updated by another job: results/feature_table.tsv, results/samples_clean.csv
+    resources: tmpdir=/var/folders/m3/c_wtpwn952l_1vmqxsd9wbwm0000gn/T
+[Tue Nov  3 17:37:08 2026]
+Finished jobid: 5 (Rule: make_crosswalk)
+5 of 8 steps (62%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Nov  3 17:37:08 2026]
+localrule merge_tables:
+    input: scripts/merge_tables.py, results/samples_clean.csv, results/crosswalk.tsv, results/feature_table.tsv
+    output: results/combined_table.tsv
+    log: logs/merge_tables.log
+    jobid: 2
+    reason: Missing output files: results/combined_table.tsv; Input files updated by another job: results/feature_table.tsv, results/samples_clean.csv, results/crosswalk.tsv
+    resources: tmpdir=/var/folders/m3/c_wtpwn952l_1vmqxsd9wbwm0000gn/T
+[Tue Nov  3 17:37:09 2026]
+Finished jobid: 2 (Rule: merge_tables)
+6 of 8 steps (75%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Nov  3 17:37:09 2026]
+localrule make_report:
+    input: scripts/make_report.py, results/combined_table.tsv
+    output: results/summary_figure.png, results/report.md
+    log: logs/make_report.log
+    jobid: 1
+    reason: Missing output files: results/report.md, results/summary_figure.png; Input files updated by another job: results/combined_table.tsv
+    resources: tmpdir=/var/folders/m3/c_wtpwn952l_1vmqxsd9wbwm0000gn/T
+[Tue Nov  3 17:37:10 2026]
+Finished jobid: 1 (Rule: make_report)
+7 of 8 steps (88%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Nov  3 17:37:10 2026]
+localrule all:
+    input: results/report.md, results/summary_figure.png
+    jobid: 0
+    reason: Input files updated by another job: results/report.md, results/summary_figure.png
+    resources: tmpdir=/var/folders/m3/c_wtpwn952l_1vmqxsd9wbwm0000gn/T
+[Tue Nov  3 17:37:10 2026]
+Finished jobid: 0 (Rule: all)
+8 of 8 steps (100%) done
+Complete log(s): /Users/vanmont/lab5-workflow-van/.snakemake/log/2026-11-03T173706.495644.snakemake.log

@@ -1,0 +1,85 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-11-03 17:40:27
+  Workflow ID: a2cbc0ce-8880-42ce-9751-5dcfc7a1dc31
+  Platform: macOS-26.5-arm64-arm-64bit
+  Host: Vans-MacBook-Air.local
+  User: vanmont
+  Snakemake version: 9.24.0
+  Python version: 3.12.16 (main, Oct 26 2026, 11:31:43) [Clang 21.1.8 ]
+  Command: /opt/homebrew/Caskroom/miniforge/base/envs/lab5/bin/snakemake -n
+  Snakefile: /Users/vanmont/lab5-workflow-van/Snakefile
+  Base directory: /Users/vanmont/lab5-workflow-van
+  Run directory: /Users/vanmont/lab5-workflow-van
+  Working directory: /Users/vanmont/lab5-workflow-van
+  Config file(s): ['config.yaml']
+  Config MD5: 714f75bb778fdfbb5283094fbd706a00
+
+Building DAG of jobs...
+Job stats:
+job               count
+--------------  -------
+clean_samples         1
+make_crosswalk        1
+merge_tables          1
+make_report           1
+all                   1
+total                 5
+
+
+[Tue Nov  3 17:40:27 2026]
+rule clean_samples:
+    input: scripts/clean_samples.py, data/raw/messy_samples.csv
+    output: results/samples_clean.csv
+    log: logs/clean_samples.log
+    jobid: 3
+    reason: Updated input files: data/raw/messy_samples.csv
+    resources: tmpdir=/var/folders/m3/c_wtpwn952l_1vmqxsd9wbwm0000gn/T
+[Tue Nov  3 17:40:27 2026]
+rule make_crosswalk:
+    input: scripts/make_crosswalk.py, results/samples_clean.csv, results/feature_table.tsv
+    output: results/crosswalk.tsv
+    log: logs/make_crosswalk.log
+    jobid: 5
+    reason: Input files updated by another job: results/samples_clean.csv
+    resources: tmpdir=/var/folders/m3/c_wtpwn952l_1vmqxsd9wbwm0000gn/T
+[Tue Nov  3 17:40:27 2026]
+rule merge_tables:
+    input: scripts/merge_tables.py, results/samples_clean.csv, results/crosswalk.tsv, results/feature_table.tsv
+    output: results/combined_table.tsv
+    log: logs/merge_tables.log
+    jobid: 2
+    reason: Input files updated by another job: results/samples_clean.csv, results/crosswalk.tsv
+    resources: tmpdir=/var/folders/m3/c_wtpwn952l_1vmqxsd9wbwm0000gn/T
+[Tue Nov  3 17:40:27 2026]
+rule make_report:
+    input: scripts/make_report.py, results/combined_table.tsv
+    output: results/summary_figure.png, results/report.md
+    log: logs/make_report.log
+    jobid: 1
+    reason: Input files updated by another job: results/combined_table.tsv
+    resources: tmpdir=/var/folders/m3/c_wtpwn952l_1vmqxsd9wbwm0000gn/T
+[Tue Nov  3 17:40:27 2026]
+rule all:
+    input: results/report.md, results/summary_figure.png
+    jobid: 0
+    reason: Input files updated by another job: results/report.md, results/summary_figure.png
+    resources: tmpdir=/var/folders/m3/c_wtpwn952l_1vmqxsd9wbwm0000gn/T
+Job stats:
+job               count
+--------------  -------
+clean_samples         1
+make_crosswalk        1
+merge_tables          1
+make_report           1
+all                   1
+total                 5
+
+Reasons:
+    (check individual jobs above for details)
+    input files updated by another job:
+        all, make_crosswalk, make_report, merge_tables
+    updated input files:
+        clean_samples
+This was a dry-run (flag -n). The order of jobs does not reflect the order of execution.
